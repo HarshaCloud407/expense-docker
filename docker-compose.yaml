@@ -1,4 +1,4 @@
-version: "3"
+version: "3.8"
 networks:
   expense:
 volumes:
@@ -12,7 +12,7 @@ services:
   backend:
     image: joindevops/backend:v1
     container_name: backend
-    command: sh -c "sleep 5 && node /opt/server/index.js"
+    command: sh -c "sleep 60 && node /opt/server/index.js"
     depends_on:
     - mysql
   frontend:
